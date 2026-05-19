@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Julia Lamprecht",
+    "subtitle": "M.Sc. Psychology · Autism Therapist"
+  },
+  "about": {
+    "heading": "About",
+    "text": "I am a psychologist specialising in autism therapy, currently working full-time at Behindertenhilfe in Stadt und Kreis Offenbach e.V. My focus is on individual and group therapy, counselling parents and specialist institutions, and conducting diagnostic assessments. Through my Master of Science in Business Psychology at Middlesex University, I bring both clinical and academic expertise."
+  },
+  "experience": {
+    "heading": "Experience",
+    "entries": [
+      {
+        "role": "Psychologist – Autism Therapy",
+        "org": "Behindertenhilfe in Stadt und Kreis Offenbach e.V.",
+        "period": "Jun 2023 – Present",
+        "location": "On-site",
+        "type": "Full-time",
+        "bullets": [
+          "Group and individual therapy",
+          "Counselling of parents & specialist institutions",
+          "Diagnostic assessments"
+        ]
+      },
+      {
+        "role": "Parental leave & Master's studies",
+        "org": "Career break – Relocation",
+        "period": "Jun 2021 – Feb 2023",
+        "location": "Montreal, Quebec, Canada",
+        "type": "1 yr 9 mos",
+        "bullets": []
+      },
+      {
+        "role": "Working Student – Global Health & Well-Being",
+        "org": "SAP",
+        "period": "Feb 2020 – Sep 2020",
+        "location": "Walldorf · Hybrid",
+        "type": "Working Student",
+        "bullets": [
+          "Management of Employee Assistance Program (EAP)",
+          "Statistical analysis"
+        ]
+      },
+      {
+        "role": "Working Student – Global Finance & Administration Academy",
+        "org": "SAP",
+        "period": "Oct 2019 – Feb 2020",
+        "location": "Walldorf · On-site",
+        "type": "Working Student",
+        "bullets": [
+          "Organisation of the Global Finance Rotational Programme",
+          "Support of recruitment processes",
+          "HR marketing & personnel management"
+        ]
+      },
+      {
+        "role": "Resourcing Specialist – Banking and Financial Services",
+        "org": "Michael Page",
+        "period": "Feb 2019 – Jun 2019",
+        "location": "Frankfurt Rhine-Main · On-site",
+        "type": "5 months",
+        "bullets": [
+          "Executive search in Banking and Financial Services"
+        ]
+      },
+      {
+        "role": "Work & Travel Canada",
+        "org": "Career break – Gap Year",
+        "period": "Jul 2016 – Apr 2017",
+        "location": "Toronto, Ontario, Canada",
+        "type": "10 months",
+        "bullets": [
+          "Various roles at Campbell & Tim Hortons"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "heading": "Education",
+    "entries": [
+      {
+        "degree": "Master of Science – Business Psychology",
+        "school": "Middlesex University",
+        "period": "2021 – 2023",
+        "thesis": "Pharmacological Neuroenhancement for job-related performance enhancement – Correlation of perceived stress and willingness to neuroenhance among employed adults."
+      },
+      {
+        "degree": "Bachelor of Applied Science – Psychology & Management",
+        "school": "University of Applied Management Studies",
+        "period": "2017 – 2020",
+        "thesis": "Inclusion of people with Asperger's Autism – how implicit attitudes can influence the willingness to include."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Contact",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Message",
+    "send": "Send",
+    "success": "Your message has been sent successfully. I will get back to you soon.",
+    "error": "An error occurred while sending. Please try again later.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your{'@'}email.com",
+    "messagePlaceholder": "Your message…",
+    "required": "Required"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "imprint": "Imprint"
+  }
+}
