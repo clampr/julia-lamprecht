@@ -87,12 +87,14 @@
       {
         "degree": "Master of Science – Business Psychology",
         "school": "Middlesex University",
+        "location": "London, Vereinigtes Königreich · Remote",
         "period": "2021 – 2023",
         "thesis": "Pharmacological Neuroenhancement for job-related performance enhancement – Correlation of perceived stress and willingness to neuroenhance among employed adults."
       },
       {
         "degree": "Bachelor of Applied Science – Psychologie und Management",
         "school": "University of Applied Management Studies",
+        "location": "Mannheim, Deutschland · Vor Ort",
         "period": "2017 – 2020",
         "thesis": "Inklusion von Asperger-Autisten – wie die implizite Einstellung die Inklusionsbereitschaft beeinflussen kann."
       }
@@ -100,16 +102,10 @@
   },
   "contact": {
     "heading": "Kontakt",
-    "name": "Name",
+    "address": "Adresse",
+    "phone": "Telefon",
     "email": "E-Mail",
-    "message": "Nachricht",
-    "send": "Absenden",
-    "success": "Ihre Nachricht wurde erfolgreich gesendet. Ich melde mich bald bei Ihnen.",
-    "error": "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
-    "namePlaceholder": "Ihr Name",
-    "emailPlaceholder": "ihre{'@'}email.de",
-    "messagePlaceholder": "Ihre Nachricht…",
-    "required": "Pflichtfeld"
+    "write": "E-Mail schreiben"
   },
   "footer": {
     "rights": "Alle Rechte vorbehalten.",

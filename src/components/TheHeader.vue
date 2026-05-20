@@ -17,9 +17,11 @@
           @click="navigate"
         >{{ $t(`nav.${item.key}`) }}</a>
 
-        <button class="lang-switch" @click="toggleLang">
-          {{ locale === 'de' ? 'EN' : 'DE' }}
-        </button>
+        <div class="lang-switch">
+          <button :class="{ active: locale === 'de' }" @click="setLang('de')">DE</button>
+          <span class="separator">|</span>
+          <button :class="{ active: locale === 'en' }" @click="setLang('en')">EN</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -40,8 +42,8 @@ const navItems = [
   { id: 'contact', key: 'contact' }
 ]
 
-function toggleLang() {
-  locale.value = locale.value === 'de' ? 'en' : 'de'
+function setLang(lang) {
+  locale.value = lang
   localStorage.setItem('locale', locale.value)
   menuOpen.value = false
 }
@@ -122,34 +124,59 @@ header.scrolled nav a {
 }
 
 header.scrolled nav a:hover {
-  color: #1a1a1a;
+  color: #5c3a8c;
 }
 
 .lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-size: 0.85rem;
   letter-spacing: 0.1em;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  background: transparent;
-  color: rgba(255, 255, 255, 0.9);
-  padding: 4px 10px;
+}
+
+.lang-switch button {
+  background: none;
+  border: none;
+  padding: 0;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s;
 }
 
-.lang-switch:hover {
-  background: rgba(255, 255, 255, 0.15);
+.lang-switch button.active {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
 }
 
-header.scrolled .lang-switch {
-  border-color: #cccccc;
+.lang-switch button:hover:not(.active) {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.lang-switch .separator {
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1;
+}
+
+header.scrolled .lang-switch button {
+  color: #aaaaaa;
+}
+
+header.scrolled .lang-switch button.active {
+  color: #1a1a1a;
+}
+
+header.scrolled .lang-switch button:hover:not(.active) {
   color: #555555;
 }
 
-header.scrolled .lang-switch:hover {
-  background: #f5f5f5;
-  color: #1a1a1a;
+header.scrolled .lang-switch .separator {
+  color: #cccccc;
 }
 
 .menu-toggle {
@@ -205,13 +232,23 @@ header.scrolled .menu-toggle span {
   }
 
   nav a:hover {
-    color: #1a1a1a;
+    color: #5c3a8c;
   }
 
   .lang-switch {
     margin-top: 12px;
-    border-color: #cccccc;
-    color: #555555;
+  }
+
+  .lang-switch button {
+    color: #aaaaaa;
+  }
+
+  .lang-switch button.active {
+    color: #1a1a1a;
+  }
+
+  .lang-switch .separator {
+    color: #cccccc;
   }
 }
 </style>

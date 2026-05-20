@@ -7,38 +7,28 @@ Portfolio website for Julia Lamprecht, M.Sc. Psychology · Autismustherapeutin.
 
 ## Tech Stack
 
-| Layer    | Technology                                |
-|----------|-------------------------------------------|
-| Frontend | Vue 3 + Vite (static build)               |
-| Backend  | PHP 8 – contact form (`contact.php`)      |
-| i18n     | vue-i18n – German & English               |
-| Dev env  | Docker (Node + Apache/PHP containers)     |
-| Hosting  | Shared PHP hosting – all-inkl.com         |
+| Layer    | Technology                          |
+|----------|-------------------------------------|
+| Frontend | Vue 3 + Vite (static build)         |
+| i18n     | vue-i18n – German & English         |
+| Hosting  | GitHub Pages (custom domain)        |
 
 ---
 
-## Local Development (Docker)
+## Local Development
 
 ### Prerequisites
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (or Docker Engine + Compose plugin)
+- Node.js 18+
 
 ### Start
 
 ```bash
-docker compose up
+npm install
+npm run dev
 ```
 
-- **Frontend (Vite dev server):** http://localhost:5173  
-- **PHP backend only:** http://localhost:8080
-
-Hot-module replacement is active; changes to `frontend/src/` are reflected instantly.
-
-### Stop
-
-```bash
-docker compose down
-```
+Vite dev server runs at http://localhost:5173.
 
 ---
 
@@ -46,99 +36,54 @@ docker compose down
 
 ```
 .
-├── frontend/
-│   ├── public/
-│   │   └── contact.php          # PHP contact form (copied into build)
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── TheHeader.vue
-│   │   │   ├── HeroSection.vue
-│   │   │   ├── AboutSection.vue
-│   │   │   ├── ExperienceSection.vue
-│   │   │   ├── EducationSection.vue
-│   │   │   ├── ContactSection.vue
-│   │   │   └── TheFooter.vue
-│   │   ├── locales/
-│   │   │   ├── de.json          # German translations
-│   │   │   └── en.json          # English translations
-│   │   ├── App.vue
-│   │   ├── i18n.js
-│   │   ├── main.js
-│   │   └── style.css
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.js
-├── docker/
-│   └── php/
-│       ├── Dockerfile
-│       └── apache.conf
-├── docker-compose.yml
-└── README.md
+├── .github/
+│   └── workflows/
+│       └── deploy.yml        # GitHub Actions – build & deploy to Pages
+├── public/
+│   └── CNAME                 # Custom domain for GitHub Pages
+├── src/
+│   ├── components/
+│   │   ├── TheHeader.vue
+│   │   ├── HeroSection.vue
+│   │   ├── AboutSection.vue
+│   │   ├── ExperienceSection.vue
+│   │   ├── EducationSection.vue
+│   │   ├── ContactSection.vue
+│   │   └── TheFooter.vue
+│   ├── locales/
+│   │   ├── de.json           # German translations
+│   │   └── en.json           # English translations
+│   ├── App.vue
+│   ├── i18n.js
+│   ├── main.js
+│   └── style.css
+├── index.html
+├── package.json
+└── vite.config.js
 ```
+
+---
+
+## Deployment
+
+Pushing to `main` triggers the GitHub Actions workflow which builds the site and deploys `frontend/dist/` to GitHub Pages automatically.
+
+To enable GitHub Pages in the repository settings, go to **Settings → Pages** and set the source to **GitHub Actions**.
 
 ---
 
 ## Adding a Hero Photo
 
-1. Place a high-resolution portrait photo at `frontend/public/hero.jpg`  
-   (landscape/full-width crops work best; min. 1920 px wide)
-2. In `frontend/src/components/HeroSection.vue` replace the CSS background with:
+1. Place a portrait photo at `public/hero.jpg`.
+2. In `src/components/HeroSection.vue` replace the CSS background:
 
    ```css
    .hero {
      background-image: url('/hero.jpg');
      background-size: cover;
      background-position: center top;
-     filter: grayscale(1);
    }
    ```
-
-3. Remove or comment out the `background-image: radial-gradient(…)` lines.
-
----
-
-## Contact Form Configuration
-
-Open `frontend/public/contact.php` and update the recipient address:
-
-```php
-$to = 'mail@julia-lamprecht.com'; // ← your real mailbox
-```
-
-On all-inkl.com the PHP `mail()` function is available by default.
-
----
-
-## Build & Deploy (all-inkl.com)
-
-### 1. Install dependencies
-
-```bash
-cd frontend
-npm install
-```
-
-### 2. Build
-
-```bash
-npm run build
-```
-
-The output is written to `frontend/dist/`.
-
-### 3. Upload
-
-Upload **all files inside** `frontend/dist/` to your hosting web root via FTP/SFTP.  
-`contact.php` is automatically included in the build because it lives in `public/`.
-
-#### Recommended FTP client: FileZilla or Cyberduck
-
-```
-dist/
-├── index.html      → upload to /
-├── contact.php     → upload to /
-└── assets/         → upload to /assets/
-```
 
 ---
 
@@ -148,20 +93,3 @@ Edit the JSON files in `frontend/src/locales/`:
 
 - `de.json` – German
 - `en.json` – English
-
-CV entries (experience, education) follow the same structure in both files.
-
----
-
-## Development Without Docker
-
-If you prefer to run without Docker:
-
-```bash
-cd frontend
-npm install
-npm run dev        # starts Vite dev server at http://localhost:5173
-```
-
-> The contact form will not work locally without a PHP server.  
-> For full-stack testing, use Docker as described above.

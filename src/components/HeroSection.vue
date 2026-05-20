@@ -1,5 +1,8 @@
 <template>
   <section class="hero" aria-label="Hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="/header.mp4" type="video/mp4" />
+    </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>{{ $t('hero.title') }}</h1>
@@ -26,25 +29,26 @@
    * background-image: url('/hero.jpg');
    * The photo will be automatically displayed in grayscale via the filter property.
    */
-  background-color: #2a2a2a;
-  background-image:
-    radial-gradient(ellipse at 60% 40%, #4a4a4a 0%, #1a1a1a 60%),
-    linear-gradient(160deg, #3a3a3a 0%, #111111 100%);
-  background-size: cover;
-  background-position: center top;
-  filter: none;
+  background-color: #5c3a8c;
 }
 
-/* When a real photo is used, apply grayscale: */
-/* .hero { filter: grayscale(1); } */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(1);
+}
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.35) 0%,
-    rgba(0, 0, 0, 0.55) 100%
+    rgba(92, 58, 140, 0.5) 0%,
+    rgba(92, 58, 140, 0.72) 100%
   );
 }
 

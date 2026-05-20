@@ -71,13 +71,13 @@ const entries = computed(() =>
 
 .timeline-marker {
   position: absolute;
-  left: -25px;
+  left: -27px;
   top: 6px;
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  border: 2px solid #888888;
-  background: #f8f8f8;
+  border: 2px solid #5c3a8c;
+  background: #5c3a8c;
 }
 
 .timeline-body {

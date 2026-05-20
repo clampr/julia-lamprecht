@@ -12,6 +12,7 @@
           <div class="edu-body">
             <h3 class="degree">{{ entry.degree }}</h3>
             <p class="school">{{ entry.school }}</p>
+            <p v-if="entry.location" class="location">{{ entry.location }}</p>
             <p class="thesis"><em>Thesis:</em> {{ entry.thesis }}</p>
           </div>
         </article>
@@ -65,6 +66,12 @@ const entries = computed(() =>
   font-size: 0.9375rem;
   font-weight: 500;
   color: #444444;
+  margin-bottom: 8px;
+}
+
+.location {
+  font-size: 0.8125rem;
+  color: #888888;
   margin-bottom: 8px;
 }
 
