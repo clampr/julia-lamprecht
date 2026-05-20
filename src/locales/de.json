@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "experience": "Erfahrung",
+    "education": "Ausbildung",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Julia Lamprecht",
+    "subtitle": "M.Sc. Psychologie · Autismustherapeutin"
+  },
+  "about": {
+    "heading": "Über mich",
+    "text": "Ich bin Psychologin mit Spezialisierung auf Autismustherapie und arbeite aktuell in Vollzeit bei der Behindertenhilfe in Stadt und Kreis Offenbach e.V. Mein Schwerpunkt liegt in der Einzel- und Gruppentherapie, der Beratung von Eltern und Facheinrichtungen sowie der diagnostischen Einschätzung. Durch meinen Master of Science in Business Psychology an der Middlesex University bringe ich sowohl klinische als auch wissenschaftliche Kompetenzen mit."
+  },
+  "experience": {
+    "heading": "Berufserfahrung",
+    "entries": [
+      {
+        "role": "Psychologin in der Autismustherapie",
+        "org": "Behindertenhilfe in Stadt und Kreis Offenbach e.V.",
+        "period": "Jun 2023 – heute",
+        "location": "Vor Ort",
+        "type": "Vollzeit",
+        "bullets": [
+          "Gruppen- und Einzeltherapie",
+          "Beratung von Eltern & Facheinrichtungen",
+          "Diagnostische Einschätzungen"
+        ]
+      },
+      {
+        "role": "Elternzeit und Master-Studium",
+        "org": "Karrierepause – Umzug",
+        "period": "Jun 2021 – Feb 2023",
+        "location": "Montreal, Quebec, Kanada",
+        "type": "1 Jahr 9 Monate",
+        "bullets": []
+      },
+      {
+        "role": "Working Student – Global Health & Well-Being",
+        "org": "SAP",
+        "period": "Feb 2020 – Sep 2020",
+        "location": "Walldorf · Hybrid",
+        "type": "Werkstudentin",
+        "bullets": [
+          "Betreuung Employee Assistance Program (EAP)",
+          "Statistische Auswertung"
+        ]
+      },
+      {
+        "role": "Working Student – Global Finance & Administration Academy",
+        "org": "SAP",
+        "period": "Okt 2019 – Feb 2020",
+        "location": "Walldorf · Vor Ort",
+        "type": "Werkstudentin",
+        "bullets": [
+          "Organisation des Global Finance Rotational Programmes",
+          "Begleitung von Rekrutierungsprozessen",
+          "Personal-Marketing & Personalmanagement"
+        ]
+      },
+      {
+        "role": "Resourcing Specialist – Banking and Financial Services",
+        "org": "Michael Page",
+        "period": "Feb 2019 – Jun 2019",
+        "location": "Frankfurt Rhein-Main · Vor Ort",
+        "type": "5 Monate",
+        "bullets": [
+          "Personalberatung im Bereich Banking and Financial Services"
+        ]
+      },
+      {
+        "role": "Work & Travel Kanada",
+        "org": "Karrierepause – Gap Year",
+        "period": "Jul 2016 – Apr 2017",
+        "location": "Toronto, Ontario, Kanada",
+        "type": "10 Monate",
+        "bullets": [
+          "Verschiedene Tätigkeiten bei Campbell & Tim Hortons"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "heading": "Ausbildung",
+    "entries": [
+      {
+        "degree": "Master of Science – Business Psychology",
+        "school": "Middlesex University",
+        "location": "London, Vereinigtes Königreich · Remote",
+        "period": "2021 – 2023",
+        "thesis": "Pharmacological Neuroenhancement for job-related performance enhancement – Correlation of perceived stress and willingness to neuroenhance among employed adults."
+      },
+      {
+        "degree": "Bachelor of Applied Science – Psychologie und Management",
+        "school": "University of Applied Management Studies",
+        "location": "Mannheim, Deutschland · Vor Ort",
+        "period": "2017 – 2020",
+        "thesis": "Inklusion von Asperger-Autisten – wie die implizite Einstellung die Inklusionsbereitschaft beeinflussen kann."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Kontakt",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "write": "E-Mail schreiben"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "imprint": "Impressum"
+  }
+}
