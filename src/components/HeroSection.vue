@@ -116,4 +116,39 @@ h1 {
   60%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
   100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
 }
+
+/* ── Print: replace full-page video hero with a compact coloured header ── */
+@media print {
+  .hero {
+    height: auto;
+    min-height: 0;
+    /* background-color: #5c3a8c is already defined above — used as-is. */
+    padding: 0;
+  }
+
+  /* The video and animated scroll indicator make no sense on paper. */
+  .hero-video,
+  .scroll-hint { display: none; }
+
+  /* Collapse the overlay so the hero background-color alone creates the
+     purple block (avoids a semi-transparent layer over another purple). */
+  .hero-overlay { display: none; }
+
+  .hero-content {
+    padding: 44px 24px 36px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  /* The "Contact" CTA button is a navigation affordance only. */
+  .cta { display: none; }
+}
 </style>

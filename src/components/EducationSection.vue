@@ -1,5 +1,5 @@
 <template>
-  <section id="education">
+  <section id="education" class="alt-bg">
     <div class="container">
       <h2 class="section-heading">{{ $t('education.heading') }}</h2>
       <div class="edu-list">
@@ -34,6 +34,10 @@ const entries = computed(() =>
 </script>
 
 <style scoped>
+.alt-bg {
+  background: #f8f8f8;
+}
+
 .edu-list {
   display: flex;
   flex-direction: column;
@@ -95,6 +99,12 @@ const entries = computed(() =>
 
   .edu-period {
     padding-top: 0;
+  }
+}
+
+@media print {
+  .edu-list {
+    gap: 24px;
   }
 }
 </style>

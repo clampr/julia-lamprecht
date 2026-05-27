@@ -1,5 +1,5 @@
 <template>
-  <section id="experience" class="alt-bg">
+  <section id="experience">
     <div class="container">
       <h2 class="section-heading">{{ $t('experience.heading') }}</h2>
       <div class="timeline">
@@ -41,10 +41,6 @@ const entries = computed(() =>
 </script>
 
 <style scoped>
-.alt-bg {
-  background: #f8f8f8;
-}
-
 .timeline {
   position: relative;
   padding-left: 28px;
@@ -138,5 +134,11 @@ const entries = computed(() =>
   position: absolute;
   left: 0;
   color: #aaaaaa;
+}
+
+@media print {
+  .timeline-item {
+    margin-bottom: 28px;
+  }
 }
 </style>

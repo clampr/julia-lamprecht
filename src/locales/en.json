@@ -3,6 +3,8 @@
     "about": "About",
     "experience": "Experience",
     "education": "Education",
+    "languages": "Languages",
+    "certificates": "Certificates",
     "contact": "Contact"
   },
   "hero": {
@@ -29,14 +31,6 @@
         ]
       },
       {
-        "role": "Parental leave & Master's studies",
-        "org": "Career break – Relocation",
-        "period": "Jun 2021 – Feb 2023",
-        "location": "Montreal, Quebec, Canada",
-        "type": "1 yr 9 mos",
-        "bullets": []
-      },
-      {
         "role": "Working Student – Global Health & Well-Being",
         "org": "SAP",
         "period": "Feb 2020 – Sep 2020",
@@ -60,23 +54,13 @@
         ]
       },
       {
-        "role": "Resourcing Specialist – Banking and Financial Services",
+        "role": "Resourcing Specialist – Banking & Financial Services",
         "org": "Michael Page",
         "period": "Feb 2019 – Jun 2019",
         "location": "Frankfurt Rhine-Main · On-site",
         "type": "5 months",
         "bullets": [
-          "Executive search in Banking and Financial Services"
-        ]
-      },
-      {
-        "role": "Work & Travel Canada",
-        "org": "Career break – Gap Year",
-        "period": "Jul 2016 – Apr 2017",
-        "location": "Toronto, Ontario, Canada",
-        "type": "10 months",
-        "bullets": [
-          "Various roles at Campbell & Tim Hortons"
+          "Executive search in Banking & Financial Services"
         ]
       }
     ]
@@ -100,15 +84,36 @@
       }
     ]
   },
+  "languages": {
+    "heading": "Languages",
+    "entries": [
+      { "name": "German",  "level": "Native",  "proficiency": 5 },
+      { "name": "English", "level": "C2",      "proficiency": 5 },
+      { "name": "French",  "level": "A2", "proficiency": 2 }
+    ]
+  },
+  "certificates": {
+    "heading": "Certificates",
+    "entries": [
+      {
+        "name": "PECS (Picture Exchange Communication System) Level 1",
+        "issuer": "Pyramid Educational Consultants of Germany"
+      },
+      {
+        "name": "Marte Meo Practitioner",
+        "issuer": "Marte Meo International"
+      }
+    ]
+  },
   "contact": {
     "heading": "Contact",
     "address": "Address",
     "phone": "Phone",
     "email": "E-Mail",
+    "linkedin": "LinkedIn",
     "write": "Send an e-mail"
   },
   "footer": {
-    "rights": "All rights reserved.",
-    "imprint": "Imprint"
+    "rights": "All rights reserved."
   }
 }

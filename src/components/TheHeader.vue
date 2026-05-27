@@ -1,7 +1,7 @@
 <template>
   <header :class="{ scrolled: isScrolled }">
     <div class="container header-inner">
-      <a href="#" class="logo" @click.prevent="scrollTop">Julia Lamprecht</a>
+      <a href="#" class="logo" @click.prevent="scrollTop">JL</a>
 
       <button class="menu-toggle" :aria-expanded="menuOpen" @click="menuOpen = !menuOpen" aria-label="Menu">
         <span></span>
@@ -36,10 +36,12 @@ const isScrolled = ref(false)
 const menuOpen = ref(false)
 
 const navItems = [
-  { id: 'about', key: 'about' },
-  { id: 'experience', key: 'experience' },
-  { id: 'education', key: 'education' },
-  { id: 'contact', key: 'contact' }
+  { id: 'about',        key: 'about' },
+  { id: 'experience',   key: 'experience' },
+  { id: 'education',    key: 'education' },
+  { id: 'languages',    key: 'languages' },
+  { id: 'certificates', key: 'certificates' },
+  { id: 'contact',      key: 'contact' },
 ]
 
 function setLang(lang) {
@@ -89,15 +91,23 @@ header.scrolled {
 
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.02em;
-  transition: color 0.3s;
+  letter-spacing: 0.04em;
+  /* White square over the purple hero */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  color: #5c3a8c;
+  transition: background 0.3s, color 0.3s;
 }
 
 header.scrolled .logo {
-  color: #1a1a1a;
+  background: #5c3a8c;
+  color: #ffffff;
 }
 
 nav {
