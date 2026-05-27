@@ -65,3 +65,60 @@ section {
   height: 2px;
   background: #5c3a8c;
 }
+
+/* ── Print / PDF ──────────────────────────────────────────────────────────── */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 16mm 12mm 16mm;
+  }
+
+  /* Force background colours & images to be printed (overrides browser UI). */
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html {
+    font-size: 13px; /* slightly smaller base for a compact A4 layout */
+  }
+
+  /* Navigation header is irrelevant in a printed document. */
+  header {
+    display: none !important;
+  }
+
+  /* About section is omitted from the PDF — the hero already identifies Julia. */
+  #about {
+    display: none !important;
+  }
+
+  /* Tighter vertical rhythm for A4 pages. */
+  section {
+    padding: 28px 0;
+  }
+
+  /* Re-apply the section's padding (and background) at the top of every page
+     fragment so there's breathing room after a page break inside a grey box. */
+  .alt-bg {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .section-heading {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+    break-after: avoid;
+  }
+
+  /* Keep each timeline / education block on the same page where possible. */
+  .timeline-item,
+  .edu-item {
+    break-inside: avoid;
+  }
+
+  /* Footer (copyright/imprint) adds no value to a printed CV. */
+  footer {
+    display: none !important;
+  }
+}
